@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock head %}
+
+{% block content %}
+<h1>Person:</h1>
+{% if name %}
+<p>
+    {{ name }}
+</p>
+{% endif %}
+<br>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }}
+    {{ form.name() }}
+    {{ form.submit() }}
+</form>
+{% endblock content %}

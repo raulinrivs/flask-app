@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock head %}
+
+{% block content %}
+<h1>Car Registration</h1>
+{% if car %}
+<p>
+    {{ car }}
+</p>
+{% endif %}
+<br>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.color.label }}
+    {{ form.color() }}
+    {{ form.car_type.label }}
+    {{ form.car_type() }}
+    {{ form.owner_id.label }}
+    {{ form.owner_id() }}
+    {{ form.submit() }}
+</form>
+{% endblock content %}
