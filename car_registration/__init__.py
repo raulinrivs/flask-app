@@ -15,8 +15,8 @@ def create_app():
     from car_registration.cars.routes import cars
     app.register_blueprint(cars)
     
-    from car_registration.owner.routes import owner
-    app.register_blueprint(owner)
+    from car_registration.owner.routes import owners
+    app.register_blueprint(owners)
     
     from car_registration.main.routes import main
     app.register_blueprint(main)
